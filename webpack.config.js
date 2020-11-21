@@ -1,5 +1,4 @@
 const path = require('path')
-const outputPath = path.resolve(__dirname, 'dist'),
 //  productionが本番、developmentが開発用(productionの時は利用しない)
     MODE = "development"
 
@@ -11,7 +10,7 @@ module.exports = {
     entry: path.resolve(__dirname, './src/pages/index.tsx'),
     output: {
         //  distディレクトリにmain.jsとしてバンドる
-        path: outputPath,
+        path: path.resolve(__dirname, 'dist'),
         filename: 'main.js'
     },
     module: {
@@ -74,8 +73,8 @@ module.exports = {
     target: ["web"],
     // webpack-dev-serverの設定
     devServer: {
-        contentBase: outputPath,
+        contentBase: './dist/',
         open: true,
-        port: 3000
+        port: 8080
     }
 }
