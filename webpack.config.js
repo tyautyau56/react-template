@@ -73,8 +73,8 @@ module.exports = {
     target: ["web"],
     // webpack-dev-serverの設定
     devServer: {
-        contentBase: './dist/',
+        contentBase: './src/pages',
         open: true,
-        port: 8080
+        port: 8080,
     }
 }

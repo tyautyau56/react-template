@@ -1,32 +1,29 @@
 {
   "name": "react_template",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/pages/index.tsx",
+  "description": "react-template",
+  "main": "./src/pages/index.tsx",
   "scripts": {
-    "dev": "react-scripts start",
     "start": "webpack-dev-server",
-    "build": "webpack",
-    "test": "",
-    "eject": ""
+    "build": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "tyautyau56",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "^4.0.0"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
-    "babel-loader": "^8.2.1",
+    "@types/node": "^14.14.9",
+    "@types/react": "^17.0.0",
     "css-loader": "^5.0.1",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.11",
-    "webpack": "^5.6.0",
+    "typescript": "^4.1.2",
     "webpack-cli": "3.1.0",
     "webpack-dev-server": "^3.11.0"
   }
