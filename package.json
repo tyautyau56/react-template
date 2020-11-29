@@ -9,7 +9,6 @@
   },
   "keywords": [],
   "author": "tyautyau56",
-  "license": "ISC",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -19,6 +18,7 @@
     "@babel/preset-react": "^7.12.5",
     "@types/node": "^14.14.9",
     "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "css-loader": "^5.0.1",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
