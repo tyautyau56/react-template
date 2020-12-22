@@ -1,5 +1,7 @@
 import { Configuration } from "webpack";
 import * as path from "path";
+import sass from "sass";
+import fibers from "fibers";
 import {nodeModules} from "ts-loader/dist/constants";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -33,6 +35,36 @@ const config : Configuration = {
                     },
                     {
                         loader: "ts-loader"
+                    },
+                ],
+            },
+            {
+                test: /\.(?:c|sa|sc)ss$/,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: isDevelopment,
+                            importLoaders: 1,
+                            modules: {
+                                auto: true,
+                                localIdentName: isProduction ? "[hash:base64:8]" : "[path][name]__[local]",
+                                exportLocalsConvention: "dashesOnly",
+                            },
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: isDevelopment,
+                            implementation: sass,
+                            sassOptions: {
+                                fiber: fibers,
+                            },
+                        },
                     },
                 ],
             },
