@@ -50,12 +50,18 @@ const config : Configuration = {
                         loader: "css-loader",
                         options: {
                             sourceMap: isDevelopment,
-                            importLoaders: 1,
+                            importLoaders: 2,
                             modules: {
                                 auto: true,
                                 localIdentName: isProduction ? "[hash:base64:8]" : "[path][name]__[local]",
                                 exportLocalsConvention: "dashesOnly",
                             },
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            sourceMap: isDevelopment,
                         },
                     },
                     {
