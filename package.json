@@ -3,7 +3,9 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "prettier-watch": "onchange './src/**/*.{js,scss,json,css,ts,tsx,jsx}' -- prettier --config ./.prettierrc --write {{changed}}",
+    "format": "prettier './src/**/*.{js,scss,json,css,ts,tsx,jsx}'"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -24,8 +26,10 @@
     "cssnano": "^4.1.10",
     "fibers": "^5.0.0",
     "html-webpack-plugin": "^4.5.0",
+    "onchange": "^7.1.0",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
+    "prettier": "^2.2.1",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
