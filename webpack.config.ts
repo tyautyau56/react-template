@@ -36,7 +36,10 @@ const config : Configuration = {
                         loader: "babel-loader"
                     },
                     {
-                        loader: "ts-loader"
+                        loader: "ts-loader",
+                        options: {
+                            configFile: path.join(__dirname, 'tsconfig.json')
+                        }
                     },
                 ],
             },
